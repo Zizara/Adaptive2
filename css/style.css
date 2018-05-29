@@ -1,0 +1,91 @@
+body {
+	color: #4c4c4c;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-style: 16px;
+
+}
+
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+header {
+	position: absolute;
+	top:86px;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.header-wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* ----------- фоновая картинка -----------*/
+
+.banner {
+	height: 1100px;
+	/*центр по горизонтали, прижаться к верхнему краю*/
+	background: url("../img/banner.png") no-repeat center top;
+}
+
+/* ----------- 	ГЛАВНОЕ МЕНЮ -----------*/
+
+.logo a {
+	/*ссылка является строчным элементом для этого display*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 150px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	color:#fff;
+	font-size: 45px;
+	font-family: "Montserrat", Arial, sans-serif;
+	font-weight: 700;
+	line-height: 45px;
+	text-transform: uppercase;
+}
+
+.menu {
+	display: flex;
+	list-style: none;
+}
+
+.menu_item {
+	position: relative;
+	margin-left: 90px;
+}
+
+.menu_item::after {
+	position: absolute;
+	content: "\\\\";
+	display: block;
+	top: 0;
+	left: 100%;
+	margin-left: 40px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	color: #fff;
+}
+
+.menu_item:last-child::after {
+	display: none;
+}
+.menu_link {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.menu_link:hover {
+	color: #0d0d0d;
+}
+
+/* ----------- НАДПИСЬ НА ФОН КАРТИНКЕ -----------*/
