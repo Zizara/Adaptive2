@@ -81,7 +81,7 @@ header {
 /* ----------- 	HEAEDER -----------*/
 
 .logo a {
-	display: flex;/*ссылка является строчным элементом для этого display*/
+	display: flex;/*ссылка является строчным элементомпо умолчанию*/
 	align-items: center;
 	justify-content: center;
 	width: 150px;
@@ -199,7 +199,7 @@ header {
 	display: flex;
 	flex: 1;
 	align-items: flex-start;
-	margin-right: 60px;
+	
 }
 
 .about_wrap_content_icon {
@@ -226,10 +226,66 @@ header {
 	line-height: 28px;
 }
 
+.about_wrap_img {
+	position: relative;
+	margin-left: 60px;
+}
 .about_wrap_content_text .about_red_text  {
 	color: #e74c3c;
 	font-size: 20px;
 	font-weight: 300;
 	line-height: 28px;
 	margin-bottom: 25px;
+}
+
+/* ----------- box-skills -----------*/
+
+.box-skills {
+	display: flex;
+	margin-top: 120px;
+}
+
+.box_skills_items {
+	flex: 1;
+	width: 50%;
+}
+
+.box_skills_items__img img {
+	display: inline-block;
+	max-width: 100%/*уменьшается елси блок уменьшается*/
+}
+
+.box_skills_items__img {
+	padding-right: 50px;
+	text-align: right;
+}
+
+.box_skills_items__content {
+	padding-left: 45px;
+}
+
+/* ----------- box-line -----------*/
+.bars {
+	margin-top: 35px;
+}
+
+.box-bars {
+	margin-bottom: 50px;
+}
+.bars-title {
+	font-size: 16px;
+	line-height: 22px;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: 5px;
+
+}
+.bars-line {
+	background: #e7e7e7;
+	height: 10px;
+}
+
+.bars-line > div {
+	background: #f39c12;
+	height: 10px;
 }
