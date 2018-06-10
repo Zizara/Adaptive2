@@ -162,13 +162,15 @@ header {
 .heading {
 	display: flex;
 	align-items: center;
-	max-width: 90%;
 	margin: 0 auto 150px;
 }
 
 .heading h2 {
 	position: relative;
 	color: #0d0d0d;
+	width: 200px;
+	flex:none; /*чтобы width не уменьшался, если уменьшить окно браузера*/
+	text-align: right;
 	font-size: 30px;
 	margin-right: 40px;
 	font-weight: 700;
@@ -627,4 +629,198 @@ header {
 
 .pricing__item.active .pricing__footer {
 	background: #e6e6e6; 
+}
+
+/* ----------- TESTIMONIAL -----------*/
+
+.testimonial {
+	text-align: center; /*центровка в инлайновом эл-те*/
+	color: #fff;
+}
+
+.testimonial__text {
+	margin: 35px auto 25px;
+	font-size: 22px;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 30px;
+}
+
+.testimonial .quote-author::before {
+	display: none;
+}
+
+.testimonial .quote-author::after {
+	content: "";
+	display: block;
+	width: 50px;
+	height: 4px;
+	margin: 20px auto 0;
+	background-color: #f39c12;
+}
+
+.testimonial__avatar {
+	width: 104px;
+	height: 104px;
+	margin: 0 auto; /*центровка в блочном эл-те*/
+	border-radius: 50%;
+	overflow: hidden; /*скроем что выходит за данный блок*/
+}
+
+.testimonial__avatar img {
+	display: block;/* чтобы убрать нижний отступ*/
+	width: 100%;
+}
+
+/* ----------- TAB -----------*/
+
+.nav-tab-list {
+	list-style: none;
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+.nav-tab-list__item {
+	display: inline-block;
+
+}
+
+.nav-tab-list__item::after {
+	content: "\\\\";
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 25px;
+	color: #a6a6a6;
+	margin: 0 18px;
+}
+
+.nav-tab-list__item:last-child::after {
+	display: none;
+}
+
+.nav-tab-list__item.active .nav-tab-list__link {
+	color: #f39c12;
+}
+.nav-tab-list__link {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+
+.nav-tab-list__link:hover {
+	color: #f39c12;
+}
+
+/* ----------- CODE FOR TAB -----------*/
+
+.hide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	z-index: -1; /*все блоки перекрывают данный блок*/
+	opacity: 0;
+}
+
+.tab-cont {
+	opacity: 1;
+	transition: opacity 0.4s;
+}
+
+.tab-cont.hide {
+	opacity: 0;
+}
+
+/* ----------- TAB-WRAP -----------*/
+
+
+.porfolio-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.porfolio-list__item {
+	position: relative;
+	width: 25%;
+}
+.porfolio-list__item:hover .porfolio-list__previev {
+	display: block;
+}
+
+.porfolio-list__item:hover .porfolio-list__img [class*="icon"] {
+	display: none;
+}
+ .porfolio-list__item:hover .porfolio-list__title {
+	color: #f39c12;
+}
+.porfolio-list__item:hover .porfolio-list__img {
+	background: #fff;
+}
+.porfolio-list__item:hover .porfolio-list__img img {
+	opacity: 0.6;
+}
+.porfolio-list__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.porfolio-list__img {
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	font-size: 58px;
+	height: 220px;
+	overflow: height;
+	background-color: #c7c7c7;
+}
+.porfolio-list__img img {
+	display: block;
+	width: 100%;
+	min-height: 100%;
+	opacity:1;
+	
+}
+.porfolio-list__previev {
+	position: absolute;
+	display: none;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50% , -50%);
+	width: 100px;
+	height: 100px;
+	opacity: 0.6;
+	background: #f39c12 url("../img/plus.png") no-repeat center;
+	border-radius: 50%;
+	z-index: 3;
+}
+.porfolio-list__previev:hover {
+	opacity: 0.9;
+}
+.porfolio-list__footer {
+	padding: 20px 10px;
+	text-align: center;
+}
+
+.porfolio-list__title {
+	color: #0d0d0d;
+	font-size: 15px;
+	font-weight: 700;
+	line-height: 22px;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+
+.porfolio-list__category {
+	color: #8c8c8c;
+	font-size: 14px;
+	font-weight: 400;
 }
