@@ -2,7 +2,7 @@ body {
 	color: #4c4c4c;
 	font-family: "Open Sans", Arial, sans-serif;
 	font-style: 16px;
-
+	line-height: 1;
 }
 
 .wrapper {
@@ -35,6 +35,13 @@ h1 .sm {
 	font-weight: 300;
 	line-height: 60px;
 }
+h2 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #0d0d0d;
+}
 
 h6 {
 	color: #0d0d0d;
@@ -43,35 +50,14 @@ h6 {
 	line-height: 25px;
 	text-transform: uppercase;
 }
+ p {
+ 	line-height: 28px;
+ }
 
 .hr {
 	height: 2px;
 	margin: 120px 0;
 	background-color: #e6e6e6;
-}
-/* ----------- 	BUTTONS-----------*/
-.btn {
-	display: inline-block;
-	vertical-align: middle;
-	color:#fff;
-	font-family: "Open Sans", Arial, sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	height: 42px;
-	padding:10px 35px 0;
-	border: 2px solid #fff;
-	background-color: transparent;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-.btn-warning {
-	color: #0d0d0d;
-	border-color: #f39c12;
-}
-.btn:hover {
-	background: #f39c12;
-	color: #fff;
-	border: 2px solid #f39c12;
 }
 
 header {
@@ -87,7 +73,82 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
+/* ----------- 	BUTTONS-----------*/
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	color:#fff;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	height: 42px;
+	padding:10px 35px 0;
+	border: 2px solid #fff;
+	background-color: transparent;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+.btn-warning {
+	color: #0d0d0d;
+	border-color: #f39c12;
+}
 
+.btn-sm {
+	height: 38px;
+	padding-top: 9px;
+}
+.btn:hover {
+	background: #f39c12;
+	color: #fff;
+	border: 2px solid #f39c12;
+}
+ input.btn , button.btn {
+ 	padding-top: 0 !important;
+ }
+
+/* ----------- 	FORM-----------*/
+.form-field {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.form-field__icon {
+	position: absolute;
+	top: 15px;
+	right: 30px;
+	width: 20px;
+	text-align: center;
+	color: #808080;
+	font-size: 16px;
+}
+
+.form-field__icon .icon-mail {
+	font-size: 12px;
+}
+.icon-user2::before {
+	color: #808080;
+}
+.form-control {
+	display: block;
+	padding: 0 70px 0 25px;
+	width: 100%;
+	height: 45px;
+	border: 2px solid #d9d9d9;
+	color: #808080;
+	font-family: "Open Sans";
+	font-size: 15px;
+	font-weight: 400;
+	transition: 0.3s;
+}
+textarea.form-control {
+	min-height: 125px;
+	resize: none; /*убрать растяжку внизу*/
+	padding-top: 10px;
+}
+.form-control:focus {
+	border-color: #f39c12;
+}
 
 /* ----------- 	HEAEDER -----------*/
 
@@ -149,14 +210,30 @@ header {
 /* ----------- BANNER -----------*/
 
 .banner {
-	padding-top: 460px;
-	padding-bottom: 280px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 70px;
 	text-align: center;
-	height: 1100px;
+	height: calc(100vh + 100px);
+	overflow: hidden;
 	/*центр по горизонтали, прижаться к верхнему краю*/
 	background: url("../img/banner.png") no-repeat center top;
+	background-size: cover;
 }
 
+.banner::after {
+	position: absolute;
+	content: "";
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid #fff;
+	border-left: 100vw solid transparent;
+}
 /* ----------- SECTION ABOUT -----------*/
 
 .heading {
@@ -167,15 +244,10 @@ header {
 
 .heading h2 {
 	position: relative;
-	color: #0d0d0d;
 	width: 200px;
 	flex:none; /*чтобы width не уменьшался, если уменьшить окно браузера*/
 	text-align: right;
-	font-size: 30px;
 	margin-right: 40px;
-	font-weight: 700;
-	line-height: 30px;
-	text-transform: uppercase;
 }
 
 .heading h2::after {
@@ -366,10 +438,20 @@ header {
 }
 
 .team-list__items {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 	width: 269px;
 	padding: 25px 15px 30px;
 	border-top: 4px solid transparent;
+}
+/*вариант с разным кол-ом строк кнопки sociak выравнины снизу*/
+.team-list__items .social {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	flex: 1;
+	height: 100%;
 }
 .team-list__items:hover {
 	background-color: #f0f0f0;
@@ -381,6 +463,7 @@ header {
 
 .team-list__img {
 	display: flex;
+	flex: none;
 	justify-content: center;
 	align-items: center;
 	font-size: 62px;
@@ -969,4 +1052,93 @@ header {
 	height: 35px;
 	font-size: 14px;
 	padding: 8px 27px 0;
+}
+
+/* ----------- CLIENTS -----------*/
+.clients h2 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 55px;
+}
+
+.client-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.client-list a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 257px;
+	height: 162px;
+	padding: 15px;
+	border: 2px solid rgba(255, 255, 255, 0.25);
+}
+.client-list a:hover {
+	border: 2px solid rgba(255, 255, 255, 0.8);
+}
+.client-list img {
+	max-width: 100%;/*была не больше даного блока*/
+	display: block;
+}
+
+/* ----------- CONTACT -----------*/
+.contact-wrap {
+	display: flex;
+}
+.contact-wrap .contanct-form {
+	padding-top: 8px;
+}
+.contact-wrap h6 {
+	margin-bottom: 28px;
+}
+
+.contact-wrap p {
+	margin-bottom: 35px;
+}
+
+.contact-wrap__left {
+	width: 53%;
+}
+
+.contact-wrap__right {
+	width: 47%;
+	flex-shrink: 47%;/*макс ширина блока*/
+	padding-left: 60px;
+}
+.contact-list {
+	list-style: none;
+}
+
+.contact-list__item {
+	position: relative;
+	margin-bottom: 18px;
+	padding-left: 50px;
+	color: #0d0d0d;
+	line-height: 25px;
+	letter-spacing: -0.32px;
+}
+
+.contact-list__item a {
+	color: #0d0d0d;
+}
+
+.contact-list__item a:hover {
+	color: #f39c12;
+
+}
+.contact-list__icon {
+	position: absolute;
+	left: 0;
+	top: -4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border: 2px solid #f39c12;
+	border-radius: 50%;
 }
