@@ -69,9 +69,15 @@ header {
 }
 
 .header-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 /* ----------- 	BUTTONS-----------*/
 .btn {
@@ -87,6 +93,7 @@ header {
 	background-color: transparent;
 	text-decoration: none;
 	text-transform: uppercase;
+	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
 .btn-warning {
@@ -139,6 +146,7 @@ header {
 	font-family: "Open Sans";
 	font-size: 15px;
 	font-weight: 400;
+	-webkit-transition: 0.3s;
 	transition: 0.3s;
 }
 textarea.form-control {
@@ -153,9 +161,15 @@ textarea.form-control {
 /* ----------- 	HEAEDER -----------*/
 
 .logo a {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;/*ссылка является строчным элементомпо умолчанию*/
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	width: 150px;
 	height: 150px;
 	border: 2px solid #fff;
@@ -169,6 +183,8 @@ textarea.form-control {
 }
 
 .menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 }
@@ -211,9 +227,15 @@ textarea.form-control {
 
 .banner {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	padding-top: 70px;
 	text-align: center;
 	height: calc(100vh + 100px);
@@ -234,18 +256,28 @@ textarea.form-control {
 	border-bottom: 100px solid #fff;
 	border-left: 100vw solid transparent;
 }
+
+.banner-slider .slick-dots {
+	margin-top: 80px;
+}
 /* ----------- SECTION ABOUT -----------*/
 
 .heading {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin: 0 auto 150px;
 }
 
 .heading h2 {
 	position: relative;
 	width: 200px;
-	flex:none; /*чтобы width не уменьшался, если уменьшить окно браузера*/
+	-webkit-box-flex:0;
+	    -ms-flex:none;
+	        flex:none; /*чтобы width не уменьшался, если уменьшить окно браузера*/
 	text-align: right;
 	margin-right: 40px;
 }
@@ -272,27 +304,45 @@ textarea.form-control {
 }
 
 .about_wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-start;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 	
 }
 
 .about_wrap_content {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex: 1;
-	align-items: flex-start;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 	
 }
 
 .about_wrap_content_icon {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;/*для иконки*/
-	align-items: center;/*для иконки*/
-	justify-content: center;/*для иконки*/
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;/*для иконки*/
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;/*для иконки*/
 	width: 125px;
 	height: 125px;
 	margin-right: 29px;
 	font-size: 32px; /*для иконки*/
-	flex: none; /*без сужения круга*/
+	-webkit-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none; /*без сужения круга*/
 	border: 2px solid #fad293;
 	border-radius: 50%;
 }
@@ -325,12 +375,16 @@ textarea.form-control {
  	padding: 105px 0 100px;
  }
 .box-skills {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	
 }
 
 .box_skills_items {
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	width: 50%;
 }
 
@@ -377,8 +431,12 @@ textarea.form-control {
 /* ----------- box-quote -----------*/
 .section-bg {
 	height: 700px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	background: url("../img/quote-bg.png") no-repeat center top;
 	background-size: cover;
 	color: #fff;
@@ -432,14 +490,24 @@ textarea.form-control {
 /* ----------- TEAM -----------*/
 
 .team-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .team-list__items {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	text-align: center;
 	width: 269px;
 	padding: 25px 15px 30px;
@@ -447,10 +515,18 @@ textarea.form-control {
 }
 /*вариант с разным кол-ом строк кнопки sociak выравнины снизу*/
 .team-list__items .social {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	flex: 1;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	height: 100%;
 }
 .team-list__items:hover {
@@ -462,10 +538,18 @@ textarea.form-control {
 }
 
 .team-list__img {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex: none;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-flex: 0;
+	    -ms-flex: none;
+	        flex: none;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	font-size: 62px;
 	width: 200px;
 	height: 200px;
@@ -520,8 +604,12 @@ textarea.form-control {
 
 /* ----------- FACT-LIST -----------*/
 .fact-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .fact-list__items:hover .fact-list__icon {
 	border-color: #fff;
@@ -530,9 +618,15 @@ textarea.form-control {
 	color: #f39c12;
 }
 .fact-list__icon {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	font-size: 32px;
 	width: 170px;
 	height: 170px;
@@ -540,11 +634,13 @@ textarea.form-control {
 	border-radius: 50%;
 	color:#fff;
 	margin-bottom: 30px;
+	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
 .fact-list__icon [class*="icon"]::before {
 	color:#fff;
+	-webkit-transition: all 0,5s;
 	transition: all 0,5s;
 }
 
@@ -562,6 +658,8 @@ textarea.form-control {
 
 /* ----------- SERVICE -----------*/
 .service-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	text-align: center;
 	margin: 0 -15px; /*минус padding, чтобы текст по краю wrappera*/
@@ -576,9 +674,15 @@ textarea.form-control {
 	color: #fff;
 } 
 .service-list__icon {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	font-size: 27px;
 	width: 105px;
 	height: 105px;
@@ -586,11 +690,13 @@ textarea.form-control {
 	border-radius: 50%;
 	color:#fff;
 	margin: 0 auto 30px;
+	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
 .service-list__icon [class*="icon"]::before {
 	color: #0d0d0d;
+	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
 
@@ -605,6 +711,8 @@ textarea.form-control {
 
 /* ----------- BOX-PRICING -----------*/
 .box-pricing {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -615,8 +723,12 @@ textarea.form-control {
 	margin-left: 0;
 }
 .pricing {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-start;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 	text-align: center;
 	margin-left: 5%;
 }
@@ -715,6 +827,9 @@ textarea.form-control {
 }
 
 /* ----------- TESTIMONIAL -----------*/
+.testimonial-slider .slick-dots {
+	margin-top: 30px;
+}
 
 .testimonial {
 	text-align: center; /*центровка в инлайновом эл-те*/
@@ -812,6 +927,7 @@ textarea.form-control {
 
 .tab-cont {
 	opacity: 1;
+	-webkit-transition: opacity 0.4s;
 	transition: opacity 0.4s;
 }
 
@@ -819,12 +935,51 @@ textarea.form-control {
 	opacity: 0;
 }
 
-/* ----------- TAB-WRAP -----------*/
+/* ----------- PORTFOLIO -----------*/
 
+.portfolio-slider {
+	position: relative;
+}
 
+.portfolio-slider .slick-dots {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	-webkit-transform: translate(0, -50%);
+	        transform: translate(0, -50%);
+}
+
+.portfolio-slider .slick-dots li {
+	margin: 5px 0;
+	display: block;
+}
+
+.portfolio-slider__buttons {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 25px;
+}
+.portfolio-slider__buttons button {
+	width: 35px;
+	height: 35px;
+	border: 2px solid #e6e6e6;
+	background-color: #ffffff;
+	margin: 0 4px;
+
+}
+.portfolio-slider__footer {
+	text-align: center;
+}
+.portfolio-slider__footer .porfolio-list__title {
+	font-size: 20px;
+	line-height: 24px;
+}
 .porfolio-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .porfolio-list__item {
@@ -856,10 +1011,16 @@ textarea.form-control {
 	z-index: 2;
 }
 .porfolio-list__img {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	position: relative;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	font-size: 58px;
 	height: 220px;
 	overflow: height;
@@ -877,7 +1038,8 @@ textarea.form-control {
 	display: none;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50% , -50%);
+	-webkit-transform: translate(-50% , -50%);
+	        transform: translate(-50% , -50%);
 	width: 100px;
 	height: 100px;
 	opacity: 0.6;
@@ -917,9 +1079,15 @@ textarea.form-control {
 }
 
 .tweet-wrap__icon {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin: 0 auto;
 	width: 100px;
 	height: 100px;
@@ -958,9 +1126,14 @@ textarea.form-control {
 /* ----------- BLOG -----------*/
 
 .blog-list {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .blog-list__item {
@@ -970,9 +1143,15 @@ textarea.form-control {
 
 .blog-list__img {
 	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	font-size: 58px;
 	height: 300px;
 	overflow: hidden;
@@ -997,17 +1176,27 @@ textarea.form-control {
 	z-index: 2;
 }
 .blog-list__header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: flex-end;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 	position: absolute;
 	right: 0;
 	bottom: 0;
 }
 
 .blog-list__icon  {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 44px;
 	height: 44px;
 	background-color: #f39c12;
@@ -1020,6 +1209,8 @@ textarea.form-control {
 }
 
 .blog-list__footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding-top: 20px;
 }
@@ -1063,15 +1254,26 @@ textarea.form-control {
 
 .client-list {
 	list-style: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .client-list a {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	width: 257px;
 	height: 162px;
 	padding: 15px;
@@ -1087,6 +1289,8 @@ textarea.form-control {
 
 /* ----------- CONTACT -----------*/
 .contact-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 .contact-wrap .contanct-form {
@@ -1106,7 +1310,8 @@ textarea.form-control {
 
 .contact-wrap__right {
 	width: 47%;
-	flex-shrink: 47%;/*макс ширина блока*/
+	-ms-flex-negative: 47%;
+	    flex-shrink: 47%;/*макс ширина блока*/
 	padding-left: 60px;
 }
 .contact-list {
@@ -1134,11 +1339,73 @@ textarea.form-control {
 	position: absolute;
 	left: 0;
 	top: -4px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	width: 34px;
 	height: 34px;
 	border: 2px solid #f39c12;
 	border-radius: 50%;
+}
+/* ----------- MAP -----------*/
+
+#map {
+	position: relative;
+	overflow: hidden;
+}
+
+#map::after, #map::before {
+	position: absolute;
+	content: "";
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 100px solid #fff;
+	border-left: 100vw solid transparent;
+}
+
+#map::before {
+	top: 0;
+	right: 0;
+	-webkit-transform: rotate(180deg);
+	        transform: rotate(180deg);
+}
+
+/* ----------- FOOTER -----------*/
+.footer-flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.footer-flex .social {
+	margin-left: auto;
+}
+.footer-flex .social-link {
+	color: #0d0d0d;
+}
+
+.footer-flex .social-link:hover {
+	color: #f39c12;
+}
+
+.copyright {
+	color: #0d0d0d;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-transform: uppercase;
 }
