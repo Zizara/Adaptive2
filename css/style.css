@@ -233,9 +233,6 @@ textarea.form-control {
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
 	padding-top: 70px;
 	text-align: center;
 	height: calc(100vh + 100px);
@@ -362,6 +359,11 @@ textarea.form-control {
 	position: relative;
 	margin-left: 60px;
 }
+
+.about_wrap_img img {
+	max-width: 100%;
+	display: block;
+}
 .about_wrap_content_text .about_red_text  {
 	color: #e74c3c;
 	font-size: 20px;
@@ -431,6 +433,7 @@ textarea.form-control {
 /* ----------- box-quote -----------*/
 .section-bg {
 	height: 700px;
+	padding: 100px 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -496,8 +499,6 @@ textarea.form-control {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
 }
 
 .team-list__items {
@@ -731,6 +732,9 @@ textarea.form-control {
 	        align-items: flex-start;
 	text-align: center;
 	margin-left: 5%;
+	-webkit-box-flex: 0;
+		-ms-flex: none;
+			flex: none;
 }
 .pricing__item {
 	width: 250px;
@@ -1358,6 +1362,7 @@ textarea.form-control {
 #map {
 	position: relative;
 	overflow: hidden;
+	height: 600px;
 }
 
 #map::after, #map::before {
@@ -1366,6 +1371,7 @@ textarea.form-control {
 	display: block;
 	bottom: 0;
 	left: 0;
+	z-index: 1;
 	width: 0;
 	height: 0;
 	border-bottom: 100px solid #fff;
@@ -1409,3 +1415,4 @@ textarea.form-control {
 	line-height: 18px;
 	text-transform: uppercase;
 }
+
