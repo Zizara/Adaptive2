@@ -1,5 +1,5 @@
 @media (max-width:1199px) {
-	/* ----------- SECTION ABOUT -----------*/
+/* ----------- SECTION ABOUT -----------*/
 	.heading {
 		margin-bottom: 110px;
 	}
@@ -14,14 +14,14 @@
 		max-width: 40%;
 		margin-left: 40px;
 	}
-	/* ----------- box-skills -----------*/
+/* ----------- box-skills -----------*/
 	.box_skills_items__img {
 		width: 44%;
 		-webkit-box-flex: 0;
 		-ms-flex: none;
 		flex: none;
 	}
-	/* ----------- TESTIMONIAL -----------*/
+/* ----------- TESTIMONIAL -----------*/
 	.section-bg {
 		height: auto;	
 		min-height: 550px;
@@ -30,19 +30,35 @@
 		font-size: 35px;
 		line-height: 50px;
 	}
-	/* ----------- TEAM -----------*/
+/* ----------- TEAM -----------*/
 	.team-list__img {
 		height: 150px;
 		width: 150px;
 	}
-	.team-list__items p {
+	.team-list__items p, .contact-wrap__right p,
+	.contact-list__item {
 		font-size: 14px;
 		line-height: 22px;
+	}
+/* ----------- BOX-PRICING -----------*/
+	.pricing {
+		margin-left: 3%;
+	}
+	.pricing__item {
+		width: 210px;
+	}
+/* ----------- CONTACT -----------*/ 
+	.contact-wrap__right {
+		padding-left: 30px;
+	}
+/* ----------- CLIENTS -----------*/
+	.client-list a {
+		height: 130px;
 	}
 }
 
 @media (max-width:991px) {
-	/* ----------- SECTION ABOUT -----------*/
+/* ----------- SECTION ABOUT -----------*/
 	.section {
 		padding: 70px 0;
 	}
@@ -59,7 +75,7 @@
 	.about_wrap_img img {
 		width: 100%;
 	}
-	/* ----------- box-skills -----------*/
+/* ----------- box-skills -----------*/
 	.box_skills_items__img {
 		margin: 0 auto 40px;
 		width: auto;
@@ -72,7 +88,7 @@
 	.box_skills_items {
 		width: auto;
 	}
-	/* ----------- TESTIMONIAL -----------*/
+/* ----------- TESTIMONIAL -----------*/
 	.section-bg {
 		min-height: 480px;
 	}
@@ -90,14 +106,14 @@
 	.quote-author::before {
 		margin-bottom: 18px;
 	}
-	/* ----------- TEAM -----------*/
+/* ----------- TEAM -----------*/
 	.team-list {
 		flex-wrap: wrap;
 	}
 	.team-list__items {
 		width: 50%;
 	}
-	/* ----------- FACT-LIST -----------*/
+/* ----------- FACT-LIST -----------*/
 	.fact-list__icon {
 		width: 140px;
 		height: 140px;
@@ -111,12 +127,60 @@
 		font-size: 35px;
 		line-height: 42px;
 	}
+/* ----------- SERVICE -----------*/
+	.service-list {
+		margin: 0 10px;
+	}
+	.service-list__item {
+		padding: 0 10px;
+	}
+	.service-list__item p {
+		font-size: 14px;
+		line-height: 22px;
+	}
+/* ----------- BOX-PRICING -----------*/
+	.box-pricing {
+		display: block;
+	}
+	.box-pricing .service-list__item {
+		text-align: center;
+	}
+	.box-pricing .service-list__icon {
+		margin-left: auto;
+	}
+	.pricing {
+		margin-left: 0;
+	}
+	.pricing__item {
+		width: auto;
+		flex:1;
+	}
+/* ----------- CLIENTS -----------*/
+	.client-list a {
+		height: 115px;
+	}
+/* ----------- FOOTER -----------*/
+	.footer-flex {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.footer-flex .social {
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	.copyright {
+		text-align: center;
+		order: 1;
+	}
 }
 
 @media (max-width:767px) {
-	/* ----------- SECTION ABOUT -----------*/
+/* ----------- SECTION ABOUT -----------*/
 	.wrapper {
-		padding: 0 20px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.hr {
 		margin: 40px 0;
@@ -151,7 +215,7 @@
 	.about_wrap_img {
 		max-width: 100%;
 	}
-	/* ----------- TESTIMONIAL -----------*/
+/* ----------- TESTIMONIAL -----------*/
 	.section-bg {
 		padding-top: 60px;
 		padding-bottom: 60px;
@@ -174,11 +238,11 @@
 	.quote-author::before {
 		margin-bottom: 15px;
 	}
-	/* ----------- TEAM -----------*/
+/* ----------- TEAM -----------*/
 	.social-link {
 		margin-right: 8px;
 	}
-	/* ----------- FACT-LIST -----------*/
+/* ----------- FACT-LIST -----------*/
 	.fact-list {
 		flex-wrap: wrap;
 		justify-content: center;
@@ -190,10 +254,60 @@
 	.fact-list__icon {
 		margin: 0 auto 15px;
 	}
+/* ----------- SERVICE -----------*/
+	.service-list {
+		display: block;
+	}
+	.service-list__item {
+		margin: 0 auto 40px;
+		max-width: 420px;
+	}
+/* ----------- BOX-PRICING -----------*/
+	.pricing {
+		display: block;
+		margin: 0 auto;
+		max-width: 420px;
+	}
+	.pricing__item:first-child {
+		border-right: 1px solid #e6e6e6;
+		margin-top: 0;
+	}
+	.pricing__item:last-child {
+		border-left: 1px solid #e6e6e6;
+		margin-top: 0;
+	}
+/* ----------- CONTACT -----------*/ 
+	.contact-wrap {
+		display: block;
+	}
+	.contact-wrap__left {
+		width: auto;
+		margin-bottom: 30px;
+	}
+	.contact-wrap__right {
+		padding-left: 0;
+		width: auto;
+	}
+/* ----------- CLIENTS -----------*/
+	.client-list  {
+		display: block;
+		text-align: center;
+	}
+	.client-list__item {
+		display: inline-block;
+		vertical-align: middle;
+		width: 220px;
+	}
+	#map {
+		height: 350px;
+	}
+	#map::before, #map::after {
+		display: none;
+	}
 }
 
 @media (max-width:479px) {
-	/* ----------- TESTIMONIAL -----------*/
+/* ----------- TESTIMONIAL -----------*/
 	.quote-text {
 		font-size: 16px;
 		line-height: 22px;
@@ -206,7 +320,7 @@
 		font-size: 25px;
 		line-height: 25px;
 	}
-	/* ----------- TEAM -----------*/
+/* ----------- TEAM -----------*/
 	.team-list, .fact-list {
 		display: block;
 	}
@@ -214,8 +328,13 @@
 		width: auto;
 		border-bottom: 1px solid #eee;
 	}
-	/* ----------- FACT-LIST -----------*/
+/* ----------- FACT-LIST -----------*/
 	.fact-list__items {
 		width: auto;
 	}
+	.testimonial__text {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
 }	

@@ -1258,14 +1258,17 @@ textarea.form-control {
 
 .client-list {
 	list-style: none;
+	margin: 0 -10px; 
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+}
+.client-list__item {
+	margin: 0 10px 20px;
+	width: 257px;
 }
 
 .client-list a {
@@ -1278,7 +1281,6 @@ textarea.form-control {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	width: 257px;
 	height: 162px;
 	padding: 15px;
 	border: 2px solid rgba(255, 255, 255, 0.25);
@@ -1287,6 +1289,7 @@ textarea.form-control {
 	border: 2px solid rgba(255, 255, 255, 0.8);
 }
 .client-list img {
+	height: auto;
 	max-width: 100%;/*была не больше даного блока*/
 	display: block;
 }

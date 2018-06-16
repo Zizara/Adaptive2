@@ -12,7 +12,7 @@
 // 	$(window).bind('load resize', hf);
 
 // });
-
+//табуляция
 $(function(){
 	$(".tabs a").click(function(){
 		$(this).parents(".tab-wrap").find(".tab-cont").addClass("hide");
@@ -22,7 +22,7 @@ $(function(){
 		$(this).parent().addClass("active");
 		return false
 	});
-
+//слайдер
 	$(".banner-slider, .testimonial-slider").slick({
 		arrows: false,
 		dots: true,
@@ -32,6 +32,14 @@ $(function(){
 		appendArrows: ".portfolio-slider__buttons",
 		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
+		responsive: [
+		{
+				breakpoint: 767,//на каком расширение изменяются настройки
+				settings: {
+					dots: false,
+				}
+			}
+		]
 	})
 
 });
